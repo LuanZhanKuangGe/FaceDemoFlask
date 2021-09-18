@@ -1,0 +1,14 @@
+<html>
+   <body>
+      <p>上传身份证(png)
+      <form action = "http://localhost:5000/card" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" name = "file" /><br />
+         <input type = "submit"/>
+      </form>
+      <p>上传照片(png)
+      <form action = "http://localhost:5000/photo" method = "POST" enctype = "multipart/form-data">
+         <input type = "file" name = "file" /><br />
+         <input type = "submit"/>
+      </form>
+      <a target = "_blank" href="http://localhost:5000/check">检测</a>
+</html>
