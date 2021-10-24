@@ -26,5 +26,8 @@ def photo():
 @app.route('/check', methods=['GET'])  # 检测
 def check():
     models = ["VGG-Face", "Facenet", "Facenet512", "OpenFace", "DeepFace", "DeepID", "ArcFace", "Dlib"]
-    result = DeepFace.verify("./card.png", "./photo.png", model_name = models[0])
-    return str(result)
+    try:
+        result = DeepFace.verify("./card.png", "./photo.png", model_name = models[0])
+        return str(result)
+    except:
+        return "error"
